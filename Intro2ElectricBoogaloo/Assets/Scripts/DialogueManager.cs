@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialouge)
     {
         dialogueOpen = true;
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         conversation = new Queue<DialoguePiece>();
         foreach (DialoguePiece DP in dialouge.conversation)
         {
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         dialogueOpen = false;
         endDialogue.Invoke();
     }
